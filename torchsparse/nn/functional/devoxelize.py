@@ -41,7 +41,7 @@ def calc_ti_weights(
         w7 = (x - xf) * (y - yf) * (z - zf)
 
         w = torch.cat([w0, w1, w2, w3, w4, w5, w6, w7], dim=1)
-        # w = w.transpose(1, 0).contiguous()
+        w = w.transpose(1, 0).contiguous()
         if scale != 1:
             w /= scale**3
         w[idx_query == -1] = 0
