@@ -11,7 +11,7 @@ from torchsparse.utils.tensor_cache import (
     get_tensor_cache_mode,
 )
 
-__all__ = ["SparseTensor"]
+__all__ = ["SparseTensor", "PointTensor"]
 
 _allow_negative_coordinates = False
 
